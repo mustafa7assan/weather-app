@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="https://openweathermap.org/img/wn/02d@2x.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
@@ -27,103 +28,26 @@
           <img src="#" alt="weathe image" class="weather__image" />
           <div class="left__side__content">
             <div class="degrees">
-              <button class="btn btn--cel">C</button>
-              <button class="btn btn--far">F</button>
+              <button class="btn btn--unit">C</button>
+              <button class="btn btn--unit">F</button>
             </div>
             <div class="weather">
-              <div class="weather__details">
-                <div class="weather__card">
-                  <div class="card__day">Sunday</div>
-                  <div class="card__degree">
-                    <div class="degree__great">45 C <sup> &#176;</sup></div>
-                    <div class="degree__small">30 C <sup> &#176;</sup></div>
-                  </div>
-                  <div class="card__weather__type--icon">
-                    <i class="fa-solid fa-cloud"></i>
-                  </div>
-                </div>
-
-                <div class="weather__card">
-                  <div class="card__day">Monday</div>
-                  <div class="card__degree">
-                    <div class="degree__great">45 C <sup> &#176;</sup></div>
-                    <div class="degree__small">30 C <sup> &#176;</sup></div>
-                  </div>
-                  <div class="card__weather__type--icon">
-                    <i class="fa-solid fa-cloud"></i>
-                  </div>
-                </div>
-
-                <div class="weather__card">
-                  <div class="card__day">Tuesday</div>
-                  <div class="card__degree">
-                    <div class="degree__great">45 C <sup> &#176;</sup></div>
-                    <div class="degree__small">30 C <sup> &#176;</sup></div>
-                  </div>
-                  <div class="card__weather__type--icon">
-                    <i class="fa-solid fa-cloud"></i>
-                  </div>
-                </div>
-
-                <div class="weather__card">
-                  <div class="card__day">Wednesday</div>
-                  <div class="card__degree">
-                    <div class="degree__great">45 C <sup> &#176;</sup></div>
-                    <div class="degree__small">30 C <sup> &#176;</sup></div>
-                  </div>
-                  <div class="card__weather__type--icon">
-                    <i class="fa-solid fa-cloud"></i>
-                  </div>
-                </div>
-
-                <div class="weather__card">
-                  <div class="card__day">Thrusday</div>
-                  <div class="card__degree">
-                    <div class="degree__great">45 C <sup> &#176;</sup></div>
-                    <div class="degree__small">30 C <sup> &#176;</sup></div>
-                  </div>
-                  <div class="card__weather__type--icon">
-                    <i class="fa-solid fa-cloud"></i>
-                  </div>
-                </div>
-
-                <div class="weather__card">
-                  <div class="card__day">Friday</div>
-                  <div class="card__degree">
-                    <div class="degree__great">45 C <sup> &#176;</sup></div>
-                    <div class="degree__small">30 C <sup> &#176;</sup></div>
-                  </div>
-                  <div class="card__weather__type--icon">
-                    <i class="fa-solid fa-cloud"></i>
-                  </div>
-                </div>
-
-                <div class="weather__card">
-                  <div class="card__day">Saturday</div>
-                  <div class="card__degree">
-                    <div class="degree__great">45 C <sup> &#176;</sup></div>
-                    <div class="degree__small">30 C <sup> &#176;</sup></div>
-                  </div>
-                  <div class="card__weather__type--icon">
-                    <i class="fa-solid fa-cloud"></i>
-                  </div>
-                </div>
-
+              <div class="week__forecast">
                 <!------------------------ ----------------------->
               </div>
               <div class="weather__main">
                 <div class="weather__temp">
-                  45 <sup class="degree-symble">&#176;</sup>
+                  <span></span> <sup class="degree-symble">&#176;</sup>
                 </div>
                 <div class="weather__info">
-                  <div class="weather__city">London</div>
-                  <div class="weather__date">06:09 - Monday, 9, Sep 2022</div>
+                  <div class="weather__city"></div>
+                  <div class="weather__date"></div>
                 </div>
                 <div class="weather__type">
                   <div class="weather__type--icon">
-                    <i class="fa-solid fa-cloud"></i>
+                    <img src="#" alt="" />
                   </div>
-                  <div class="weather__type--text">Cloudy</div>
+                  <div class="weather__type--text"></div>
                 </div>
               </div>
             </div>
@@ -132,24 +56,28 @@
         <section class="right__side">
           <div class="right__side--top">
             <form class="search__form">
-              <input type="text" placeholder="City Name" />
+              <input
+                type="text"
+                placeholder="City Name"
+                class="location__input"
+              />
               <button type="submit" class="search__btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
             <ul class="top__cities">
               <li>Khartoum</li>
-              <li>Omderman</li>
-              <li>Bahri</li>
-              <li>Shandi</li>
+              <li>London</li>
+              <li>Ushuaia</li>
+              <li>Berlin</li>
             </ul>
           </div>
           <div class="right__side--bottom">
             <h3>Weather Details</h3>
             <ul class="weather__details--list">
-              <li>Cloudy <span class="" weather__cloude>86%</span></li>
-              <li>Humidity <span class="weather__humidity">62%</span></li>
-              <li>Wind <span class="weather__wind">6/em/h</span></li>
+              <li>Cloudy <span class="weather__cloude"></span></li>
+              <li>Humidity <span class="weather__humidity"></span></li>
+              <li>Wind <span class="weather__wind"></span></li>
             </ul>
           </div>
         </section>
