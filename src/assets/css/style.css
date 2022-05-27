@@ -224,7 +224,7 @@ main {
 
 /* Media Queries */
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .right__side--bottom {
     display: none;
   }
