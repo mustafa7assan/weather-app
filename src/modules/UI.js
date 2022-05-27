@@ -73,7 +73,7 @@ const UI = (() => {
       showTodayWeather(today, city);
       showWeekdayWeather(weekDays);
     } catch (err) {
-      alert(
+      console.log(
         'There is no city has this name! Please try with another city/country'
       );
     }
