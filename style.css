@@ -4,10 +4,220 @@
   box-sizing: inherit;
 }
 
+:root {
+  --text-color: #131059;
+}
+
 html {
   box-sizing: border-box;
 }
 
+html,
 body {
-  background-color: #eee;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #414345;
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  width: 90%;
+  height: 90%;
+  border-radius: 20px;
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+}
+
+.left-container {
+  background: #e3f6fe;
+  padding: 40px 30px;
+}
+
+.right-container {
+  background-color: rgb(8, 8, 59);
+}
+
+.city-form {
+  position: relative;
+}
+
+.city-form input {
+  font-family: inherit;
+  color: #888;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: #fff;
+  padding: 10px 35px;
+  width: 300px;
+}
+
+.city-form input:focus {
+  border-color: #ccc;
+}
+
+.city-form .icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.city-form .icon:first-of-type {
+  left: 10px;
+}
+
+.city-form .icon:last-of-type {
+  left: 270px;
+  cursor: pointer;
+}
+
+.heading {
+  margin: 30px 0;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 25px;
+}
+.heading .highlight {
+  font-weight: 600;
+}
+.cities {
+  display: flex;
+  justify-content: space-between;
+}
+.city {
+  width: 100px;
+  cursor: pointer;
+}
+
+.city-img {
+  width: 100px;
+  height: 122px;
+  background-color: #414345;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.city-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.city-name {
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.right-container {
+  background-image: url("img/rain.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.table th,
+.table td {
+  color: #888;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 10px 35px;
+  text-align: center;
+}
+.table td {
+  font-size: 12px;
+}
+.table td.day {
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.table td.max {
+  color: var(--text-color);
+}
+
+.right-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.weather-info .icon {
+  width: 50px;
+  height: 50px;
+}
+
+.weather-date h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+.weather-date .date {
+  font-size: 12px;
+  text-align: center;
+}
+
+.weather-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.weather-type-name {
+  font-size: 12px;
+}
+
+.temp-info {
+  position: relative;
+}
+
+.temp {
+  display: inline-block;
+  font-size: 130px;
+}
+.temp-uint {
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+}
+
+.condition-info {
+  display: flex;
+  gap: 70px;
+  font-size: 12px;
+}
+
+.condition-info .container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
 }

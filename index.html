@@ -3,9 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Weather APP</title>
   </head>
-  <body></body>
+  <body>
+    <div class="main-container">
+      <!-- Form -->
+      <div class="left-container">
+        <div class="city-form">
+          <img src="img/magnify.svg" alt="" class="icon" />
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Search new city"
+          />
+          <img src="img/map-marker-outline.svg" alt="" class="icon" />
+        </div>
+        <!-- Heading -->
+        <h1 class="heading">
+          Example of <span class="highlight">Cities</span>
+        </h1>
+
+        <!-- Cities -->
+
+        <div class="cities">
+          <!-- City Card -->
+          <div class="city">
+            <div class="city-img">
+              <img src="img/tokyo.jpg" alt="" srcset="" />
+            </div>
+            <div class="city-name">Tokyo, Japan</div>
+          </div>
+
+          <div class="city">
+            <div class="city-img">
+              <img src="img/nyc.jpg" alt="" srcset="" />
+            </div>
+            <div class="city-name">New York, USA</div>
+          </div>
+
+          <div class="city">
+            <div class="city-img">
+              <img src="img/paris.jpg" alt="" srcset="" />
+            </div>
+            <div class="city-name">Paris, France</div>
+          </div>
+
+          <div class="city">
+            <div class="city-img">
+              <img src="img/london.jpg" alt="" srcset="" />
+            </div>
+            <div class="city-name">London, UK</div>
+          </div>
+
+          <div class="city">
+            <div class="city-img">
+              <img src="img/dubai.jpg" alt="" srcset="" />
+            </div>
+            <div class="city-name">Dubai, UAE</div>
+          </div>
+        </div>
+
+        <h1 class="heading">Weather <span class="highlight">forecast</span></h1>
+
+        <!-- Weather Data -->
+        <table class="table">
+          <tr>
+            <th>&nbsp;</th>
+            <th>Speed</th>
+            <th>Humidity</th>
+            <th>&nbsp;</th>
+            <th>Temperature</th>
+            <th>&nbsp;</th>
+          </tr>
+          <tr>
+            <td class="day">Sunday</td>
+            <td>60 km/h</td>
+            <td>40%</td>
+            <td><img src="img/cloud-icon.svg" alt="" /></td>
+            <td>17°C</td>
+            <td class="max">28°C</td>
+          </tr>
+          <tr>
+            <td class="day">Monday</td>
+            <td>8 km/h</td>
+            <td>70%</td>
+            <td><img src="img/sun-icon.svg" alt="" /></td>
+            <td>20°C</td>
+            <td class="max">30°C</td>
+          </tr>
+          <tr>
+            <td class="day">Tuesday</td>
+            <td>50 km/h</td>
+            <td>90%</td>
+            <td><img src="img/rain-icon.svg" alt="" /></td>
+            <td>12°C</td>
+            <td class="max">18°C</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="right-container">
+        <div class="weather-info">
+          <div class="weather-type">
+            <img src="img/rain-icon-2.svg" alt="" class="icon" />
+            <p class="weather-type-name">Rainy</p>
+          </div>
+          <div class="weather-date">
+            <h1>Today</h1>
+            <div class="date">Mon, 11 Aug</div>
+          </div>
+        </div>
+        <div class="temp-info">
+          <span class="temp">18</span><span class="temp-uint">°C</span>
+        </div>
+        <div class="condition-info">
+          <div class="container">
+            <img src="img/wind.svg" alt="" class="speed-icon" />
+            <div class="speed">60 km/h</div>
+          </div>
+
+          <div class="container">
+            <img src="img/humidity.svg" alt="" class="humidity-icon" />
+            <div class="humidity">50%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
