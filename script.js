@@ -22,7 +22,7 @@ const getWeather = async function (cityName) {
   loading.classList.remove("hidden");
   errorLabel.textContent = "";
   try {
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=4355839a46fc4b8e80832221230908&q=${cityName}&days=3&aqi=no&alerts=no`;
+    const url = `httpa://api.weatherapi.com/v1/forecast.json?key=4355839a46fc4b8e80832221230908&q=${cityName}&days=3&aqi=no&alerts=no`;
     const response = await fetch(url, {
       mode: "cors",
     });
