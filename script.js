@@ -20,6 +20,7 @@ const unitContainer = document.querySelector(".unit");
 const tempUnitLabel = document.querySelector(".temp-uint");
 
 const getWeather = async function (cityName) {
+  restUnit();
   weatherContainer.classList.add("hidden");
   loading.classList.remove("hidden");
   errorLabel.textContent = "";
@@ -228,6 +229,13 @@ const CToF = function (value) {
 
 const FToC = function (value) {
   return Math.trunc((value * 9) / 5 + 32);
+};
+
+const restUnit = function () {
+  currentUnit = "C";
+  tempUnitLabel.textContent = "°C";
+  document.querySelector(".f").classList.remove("active");
+  document.querySelector(".c").classList.add("active");
 };
 
 getWeather("london");
