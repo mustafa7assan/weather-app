@@ -23,7 +23,9 @@ const getWeather = async function (cityName) {
   errorLabel.textContent = "";
   try {
     const url = `http://api.weatherapi.com/v1/forecast.json?key=4355839a46fc4b8e80832221230908&q=${cityName}&days=3&aqi=no&alerts=no`;
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      mode: "cors",
+    });
     if (!response.ok) throw new Error("City is not found");
     const weather = await response.json();
     displayCurrentWeather(weather.current);
@@ -139,7 +141,9 @@ const displayWeatherLocation = function (location) {
 const getCityName = async function (lat, lng) {
   try {
     const url = `https://geocode.xyz/${lat},${lng}?json=1&auth=207745578208635364237x111797`;
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      mode: "cors",
+    });
     const data = await response.json();
     getWeather(data.city);
   } catch (e) {
