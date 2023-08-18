@@ -17,7 +17,7 @@
     <div class="main-container">
       <!-- Form -->
       <div class="left-container">
-        <div class="city-form">
+        <form class="city-form">
           <img src="img/magnify.svg" alt="" class="icon" />
           <input
             type="text"
@@ -25,8 +25,13 @@
             id="city"
             placeholder="Search new city"
           />
-          <img src="img/map-marker-outline.svg" alt="" class="icon" />
-        </div>
+          <p class="error"></p>
+          <img
+            src="img/map-marker-outline.svg"
+            alt=""
+            class="geolocation icon"
+          />
+        </form>
         <!-- Heading -->
         <h1 class="heading">
           Example of <span class="highlight">Cities</span>
@@ -75,65 +80,43 @@
         <h1 class="heading">Weather <span class="highlight">forecast</span></h1>
 
         <!-- Weather Data -->
-        <table class="table">
-          <tr>
-            <th>&nbsp;</th>
-            <th>Speed</th>
-            <th>Humidity</th>
-            <th>&nbsp;</th>
-            <th>Temperature</th>
-            <th>&nbsp;</th>
-          </tr>
-          <tr>
-            <td class="day">Sunday</td>
-            <td>60 km/h</td>
-            <td>40%</td>
-            <td><img src="img/cloud-icon.svg" alt="" /></td>
-            <td>17°C</td>
-            <td class="max">28°C</td>
-          </tr>
-          <tr>
-            <td class="day">Monday</td>
-            <td>8 km/h</td>
-            <td>70%</td>
-            <td><img src="img/sun-icon.svg" alt="" /></td>
-            <td>20°C</td>
-            <td class="max">30°C</td>
-          </tr>
-          <tr>
-            <td class="day">Tuesday</td>
-            <td>50 km/h</td>
-            <td>90%</td>
-            <td><img src="img/rain-icon.svg" alt="" /></td>
-            <td>12°C</td>
-            <td class="max">18°C</td>
-          </tr>
-        </table>
+        <table class="table"></table>
       </div>
 
       <div class="right-container">
-        <div class="weather-info">
-          <div class="weather-type">
-            <img src="img/rain-icon-2.svg" alt="" class="icon" />
-            <p class="weather-type-name">Rainy</p>
-          </div>
-          <div class="weather-date">
-            <h1>Today</h1>
-            <div class="date">Mon, 11 Aug</div>
-          </div>
+        <!-- Loading snipper -->
+        <div class="lds-ellipsis loading">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <div class="temp-info">
-          <span class="temp">18</span><span class="temp-uint">°C</span>
-        </div>
-        <div class="condition-info">
-          <div class="container">
-            <img src="img/wind.svg" alt="" class="speed-icon" />
-            <div class="speed">60 km/h</div>
-          </div>
+        <div class="weather hidden">
+          <div class="weather-info">
+            <div class="weather-type">
+              <img src="#" alt="." class="icon condition-icon" />
+              <p class="weather-type-text">Rain</p>
+            </div>
+            <div class="weather-date">
+              <h1>Today</h1>
+              <div class="date">Mon, 23 Aug</div>
+            </div>
 
-          <div class="container">
-            <img src="img/humidity.svg" alt="" class="humidity-icon" />
-            <div class="humidity">50%</div>
+            <div class="region">london, United Kingdom</div>
+          </div>
+          <div class="temp-info">
+            <span class="temp">18</span><span class="temp-uint">°C</span>
+          </div>
+          <div class="condition-info">
+            <div class="container">
+              <img src="img/wind.svg" alt="" class="speed-icon" />
+              <div class="speed">30 km/h</div>
+            </div>
+
+            <div class="container">
+              <img src="img/humidity.svg" alt="" class="humidity-icon" />
+              <div class="humidity">50%</div>
+            </div>
           </div>
         </div>
       </div>
