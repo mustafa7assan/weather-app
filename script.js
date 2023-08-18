@@ -16,6 +16,8 @@ const regionLabel = document.querySelector(".region");
 const citiesContainers = document.querySelector(".cities");
 const weatherContainer = document.querySelector(".weather");
 const loading = document.querySelector(".loading");
+const unitContainer = document.querySelector(".unit");
+const tempUnitLabel = document.querySelector(".temp-uint");
 
 const getWeather = async function (cityName) {
   weatherContainer.classList.add("hidden");
@@ -126,7 +128,7 @@ const displayForecastWeather = function (forecast) {
     <td>${speed} km/h</td>
     <td>${humidity}%</td>
     <td><img src="${weather.day.condition.icon}" alt="" class="forecast-icon"/></td>
-    <td>${min}°C</td>
+    <td class="min">${min}°C</td>
     <td class="max">${max}°C</td>
   </tr>`;
 
@@ -177,5 +179,55 @@ citiesContainers.addEventListener("click", (e) => {
 
   getWeather(cityName);
 });
+
+let currentUnit = "C";
+
+unitContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("unit_")) {
+    const mins = document.querySelectorAll(".min");
+    const maxs = document.querySelectorAll(".max");
+    document.querySelector(".active").classList.remove("active");
+    e.target.classList.toggle("active");
+    tempUnitLabel.textContent = e.target.textContent;
+    if (tempUnitLabel.textContent === "°F" && currentUnit === "C") {
+      tempLabel.textContent = FToC(parseInt(tempLabel.textContent));
+      mins.forEach((min) => {
+        min.textContent = `${FToC(parseInt(min.textContent))} ${
+          e.target.textContent
+        }`;
+      });
+
+      maxs.forEach((max) => {
+        max.textContent = `${FToC(parseInt(max.textContent))} ${
+          e.target.textContent
+        }`;
+      });
+      currentUnit = "F";
+    } else if (tempUnitLabel.textContent === "°C" && currentUnit === "F") {
+      tempLabel.textContent = CToF(parseInt(tempLabel.textContent));
+      // Convert minimum temp to fahrenheit
+
+      mins.forEach((min) => {
+        min.textContent = `${Math.trunc(CToF(parseInt(min.textContent)))} ${
+          e.target.textContent
+        }`;
+      });
+      maxs.forEach((max) => {
+        max.textContent = `${Math.trunc(CToF(parseInt(max.textContent)))} ${
+          e.target.textContent
+        }`;
+      });
+      currentUnit = "C";
+    }
+  }
+});
+
+const CToF = function (value) {
+  return Math.trunc(((value - 32) * 5) / 9);
+};
+
+const FToC = function (value) {
+  return Math.trunc((value * 9) / 5 + 32);
+};
 
 getWeather("london");
